@@ -18,13 +18,15 @@ Analyse Deutsche Bahn delays data for 1 year (July 2024 to July 2025).
   - Look for data.
   - Formulating relevant questions.
 - Tuesday:
-  - Join dataframes.
+  - Merge dataframes.
+  - Filter relevant cities.
+  - Clean data.
+- Wednesday:
   - Univariate EDA.
   - Bivariate EDA.
-- Wednesday:
-  - Tableau Dashboard creating.
 - Thursday:
-  - Open.
+  - Tableau dashboard.
+  - Presentation.
 
 ## Conclusions
 
