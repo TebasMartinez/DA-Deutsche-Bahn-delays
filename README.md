@@ -10,6 +10,7 @@ Analyse Deutsche Bahn delays data for 1 year (July 2024 to July 2025).
 - Are Deustche Bahn trains generally late?
 - Is there a difference in train delays between stations in former West/East Germany?
 - Is any type of train late more often than others?
+- Are trains late more often in a specific season?
 
 ## Methodology
 ### Week plan:
