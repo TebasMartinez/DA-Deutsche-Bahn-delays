@@ -6,10 +6,32 @@ def filter(df):
     return df
 
 def clean(df):
-    df = df.drop(columns=["arrival_planned_time", "arrival_change_time", "departure_planned_time", "departure_change_time"])
+    notneeded_columns = [
+        "arrival_planned_time", 
+        "arrival_change_time", 
+        "departure_planned_time", 
+        "departure_change_time", 
+        "train_line_station_num"]
+    df = df.drop(columns=notneeded_columns)
     df.reset_index(drop=True, inplace=True)
     return df
 
+def group_dates_seasons(df):
+    df["year"] = pd.DatetimeIndex(df["time"]).year
+    df["month"] = pd.DatetimeIndex(df["time"]).month
+    df["day"] = pd.DatetimeIndex(df["time"]).day
+    df.loc[df["month"].isin([3,4,5]), "season"] = "Spring"
+    df.loc[df["month"].isin([6,7,8]), "season"] = "Summer"
+    df.loc[df["month"].isin([9,10,11]), "season"] = "Autumn"
+    df.loc[df["month"].isin([12,1,2]), "season"] = "Winter"
+    return df
+
+def separate_cat_num(df):
+    categorical_from_numerical = df.select_dtypes("number").loc[:, df.select_dtypes("number").nunique() < 50]
+    df_categorical = pd.concat([df.select_dtypes("object"), categorical_from_numerical], axis=1)
+    df_numerical = df.select_dtypes("number").drop(columns=categorical_from_numerical.columns)
+    return df_categorical, df_numerical
+    
 def group_west_east(df):
     west_germany_stations = [
     'Bremen Hbf', 'Lübeck Hbf', 'Heilbronn Hbf', 'Regensburg Hbf',
