@@ -12,9 +12,9 @@ python combinedata.py data/datalist.txt combineddata.csv
 ````
 
 ## Questions / Hypothesis
-- Are Deustche Bahn trains generally late?
+- Are Deustche Bahn trains late more than 33% of the times?
 - Is there a difference in train delays between stations in former West/East Germany?
-- Is any type of train late more often than others?
+- Is any type of train ("ICE", "IC", "RE", "RB", "S", or "IRE") late more often than others?
 - Are trains late more often in a specific season?
 
 ## Methodology
@@ -37,8 +37,13 @@ python combinedata.py data/datalist.txt combineddata.csv
 - functions.py
 - clean(df) 
   - Drops columns that aren't needed for this analysis.
+  - Resets index.
 - filter(df)
-  - Filters train types to include only "ICE", "IC", "RE", "RB", "S", and "IRE".
+  - Filters train types to include only "ICE", "IC", "RE", "RB", "S", and "IRE", which operate only within Germany and are operated by Deustche Bahn.
+- group_dates_seasons(df)
+  - Creates new columns for "year", "month", "day", and "season".
+- separate_cat_num(df)
+  - Separates categorical and numerical variables, returning two different dataframes including only those variables.
 - group_west_east(df)
   - Adds a new column indicating if the station is within former West or East Germany.
 
