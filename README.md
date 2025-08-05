@@ -24,7 +24,7 @@ python combinedata.py data/datalist.txt combineddata.csv
   - Formulate relevant questions.
 - Tuesday:
   - Combine dataframes.
-  - Filter relevant cities.
+  - Filter data.
   - Clean data.
 - Wednesday:
   - Univariate EDA.
