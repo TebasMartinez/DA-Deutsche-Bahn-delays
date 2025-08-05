@@ -35,17 +35,17 @@ python combinedata.py data/datalist.txt combineddata.csv
 
 ### Process:
 - functions.py
-- clean(df) 
-  - Drops columns that aren't needed for this analysis.
-  - Resets index.
-- filter(df)
-  - Filters train types to include only "ICE", "IC", "RE", "RB", "S", and "IRE", which operate only within Germany and are operated by Deustche Bahn.
-- group_dates_seasons(df)
-  - Creates new columns for "year", "month", "day", and "season".
-- separate_cat_num(df)
-  - Separates categorical and numerical variables, returning two different dataframes including only those variables.
-- group_west_east(df)
-  - Adds a new column indicating if the station is within former West or East Germany.
+  - clean(df) 
+    - Drops columns that aren't needed for this analysis.
+    - Resets index.
+  - filter(df)
+    - Filters train types to include only "ICE", "IC", "RE", "RB", "S", and "IRE", which operate only within Germany and are operated by Deustche Bahn.
+  - group_dates_seasons(df)
+    - Creates new columns for "year", "month", "day", and "season".
+  - separate_cat_num(df)
+    - Separates categorical and numerical variables, returning two different dataframes including only those variables.
+  - group_west_east(df)
+    - Adds a new column indicating if the station is within former West or East Germany.
 
 ## Conclusions
 
