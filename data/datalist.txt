@@ -1,0 +1,13 @@
+data/data-2024-07.parquet
+data/data-2024-08.parquet
+data/data-2024-09.parquet
+data/data-2024-10.parquet
+data/data-2024-11.parquet
+data/data-2024-12.parquet
+data/data-2025-01.parquet
+data/data-2025-02.parquet
+data/data-2025-03.parquet
+data/data-2025-04.parquet
+data/data-2025-05.parquet
+data/data-2025-06.parquet
+data/data-2025-07.parquet
