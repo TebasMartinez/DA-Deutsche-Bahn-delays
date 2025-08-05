@@ -18,7 +18,7 @@ Analyse Deutsche Bahn delays data for 1 year (July 2024 to July 2025).
   - Look for data.
   - Formulate relevant questions.
 - Tuesday:
-  - Merge dataframes.
+  - Combine dataframes.
   - Filter relevant cities.
   - Clean data.
 - Wednesday:
