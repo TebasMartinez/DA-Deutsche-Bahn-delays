@@ -4,7 +4,7 @@
 Analyse Deutsche Bahn delays data for 1 year (July 2024 to July 2025).
 
 ## Data
-[Deutsche Bahn Data-Fetching tool](https://github.com/piebro/deutsche-bahn-data)
+Used [Deutsche Bahn Data-Fetching tool](https://github.com/piebro/deutsche-bahn-data) to fetch data from DB's [Timetables API](https://developers.deutschebahn.com/db-api-marketplace/apis/product/timetables), which is under a [CC BY 4.0 license](https://creativecommons.org/licenses/by/4.0/).
 
 ## Questions / Hypothesis
 - Are Deustche Bahn trains generally late?
