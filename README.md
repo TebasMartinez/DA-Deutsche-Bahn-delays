@@ -33,6 +33,15 @@ python combinedata.py data/datalist.txt combineddata.csv
   - Tableau dashboard.
   - Presentation.
 
+### Process:
+- functions.py
+- clean(df) 
+  - Drops columns that aren't needed for this analysis.
+- filter(df)
+  - Filters train types to include only "ICE", "IC", "RE", "RB", "S", and "IRE".
+- group_west_east(df)
+  - Adds a new column indicating if the station is within former West or East Germany.
+
 ## Conclusions
 
 ## Further questions
