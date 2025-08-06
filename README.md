@@ -6,7 +6,7 @@ Analyse Deutsche Bahn delays data for 1 year (July 2024 to July 2025) including 
 ## Data
 Used [Deutsche Bahn Data-Fetching tool](https://github.com/piebro/deutsche-bahn-data) to fetch data from DB's [Timetables API](https://developers.deutschebahn.com/db-api-marketplace/apis/product/timetables), which is under a [CC BY 4.0 license](https://creativecommons.org/licenses/by/4.0/).
 
-The .csv file generated with `combinedata.py` is too big to upload to GitHub. It can be generated locally from a clone of this repo running:
+The .csv file generated with `combinedata.py`, called `data/combineddata.csv` and used in the Jupyter Notebooks throughout the analysis, is too big to upload to GitHub. It can be generated locally from a clone of this repo running:
 ````
 python combinedata.py data/datalist.txt combineddata.csv
 ````
@@ -48,7 +48,7 @@ python combinedata.py data/datalist.txt combineddata.csv
   - separate_cat_num(df)
     - Separates categorical and numerical variables, returning two different dataframes including only those variables.
   - group_west_east(df)
-    - Adds a new column indicating if the station is within former West or East Germany.
+    - Adds a new column indicating if the station is within former West or East Germany. For the purposes of this analysis, all stations in Berlin have been labelled as East.
 
 ## Conclusions
 
