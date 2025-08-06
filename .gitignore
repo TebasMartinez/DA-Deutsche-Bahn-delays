@@ -219,3 +219,4 @@ pyrightconfig.json
 
 # End of https://www.toptal.com/developers/gitignore/api/jupyternotebooks,python,macos
 data/combineddata.csv
+data/clean_grouped_combineddata.csv
