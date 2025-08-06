@@ -15,4 +15,3 @@ def main():
     df.to_csv("data/clean_grouped_combineddata.csv")
 
 main()
-    
