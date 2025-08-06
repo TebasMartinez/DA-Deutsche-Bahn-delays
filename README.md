@@ -6,9 +6,14 @@ Analyse Deutsche Bahn delays data for 1 year (July 2024 to July 2025) including 
 ## Data
 Used [Deutsche Bahn Data-Fetching tool](https://github.com/piebro/deutsche-bahn-data) to fetch data from DB's [Timetables API](https://developers.deutschebahn.com/db-api-marketplace/apis/product/timetables), which is under a [CC BY 4.0 license](https://creativecommons.org/licenses/by/4.0/).
 
-The .csv file generated with `combinedata.py`, called `data/combineddata.csv` and used in the Jupyter Notebooks throughout the analysis, is too big to upload to GitHub. It can be generated locally from a clone of this repo running:
+The file `data/combineddata.csv`, used in the Jupyter Notebooks throughout the analysis, is too big to upload to GitHub. It can be generated locally from a clone of this repo running `combinedata.py`:
 ````
 python combinedata.py data/datalist.txt combineddata.csv
+````
+
+The file `data/clean_grouped_combineddata.csv`, used in Tableau, is also too big to upload to GitHub. Once `data/combineddata.csv` has been created with the previous command, it can be generated locally from a clone of this repo running `clean_filter_group_data.py`:
+````
+python clean_filter_group_data.py
 ````
 
 ## Questions / Hypothesis
