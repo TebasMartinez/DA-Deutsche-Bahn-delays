@@ -2,7 +2,6 @@ import pandas as pd
 
 def filter(df):
     df = df[df["train_type"].isin(["ICE", "IC", "RE", "RB", "IRE"])]
-    
     return df
 
 def clean(df):
@@ -24,6 +23,13 @@ def group_dates_seasons(df):
     df.loc[df["month"].isin([6,7,8]), "season"] = "Summer"
     df.loc[df["month"].isin([9,10,11]), "season"] = "Autumn"
     df.loc[df["month"].isin([12,1,2]), "season"] = "Winter"
+    return df
+
+def group_puctuality(df):
+    df.loc[(df["delay_in_min"] > 5) & (df["is_canceled"] == False), "punctuality"] = "Late"
+    df.loc[(df["delay_in_min"] < 0) & (df["is_canceled"] == False), "punctuality"] = "Early"
+    df.loc[(df["delay_in_min"] >= 0) & (df["delay_in_min"] < 6) & (df["is_canceled"] == False), "punctuality"] = "On time"
+    df.loc[df["is_canceled"] == True, "punctuality"] = "Canceled"
     return df
 
 def separate_cat_num(df):
