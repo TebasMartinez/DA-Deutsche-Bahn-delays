@@ -51,7 +51,9 @@ python combinedata.py data/datalist.txt combineddata.csv
   - filter(df)
     - Filters train types to include only "ICE", "IC", "RE", "RB", and "IRE", which operate only within Germany and are operated by Deustche Bahn.
   - group_dates_seasons(df)
-    - Creates new columns for "year", "month", "day", and "season".
+    - Creates new columns for "year", "month", "day", and "season", and assigns relevant values to each row.
+  - group_puctuality(df)
+    - Creates new column "punctuality" and assigns relevant values to each row: "On time", "Late", "Early", "Canceled".
   - separate_cat_num(df)
     - Separates categorical and numerical variables, returning two different dataframes including only those variables.
   - group_west_east(df)
