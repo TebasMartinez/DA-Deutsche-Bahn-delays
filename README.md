@@ -33,6 +33,9 @@ python combinedata.py data/datalist.txt combineddata.csv
   - Tableau dashboard.
   - Presentation.
 
+### Punctuality definition:
+- For this analysis, I've used the same definition of punctuality that the Deutsche Bahn considers in [their own reports](https://www.deutschebahn.com/de/konzern/konzernprofil/zahlen_fakten/puenktlichkeitswerte-6878476#). Trains are considered is considered on time if they arrive less than 6 minutes late.
+
 ### Process:
 - `functions.py`
   - clean(df) 
