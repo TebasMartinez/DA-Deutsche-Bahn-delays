@@ -1,7 +1,7 @@
 import pandas as pd
 
 def filter(df):
-    df = df[df["train_type"].isin(["ICE", "IC", "RE", "RB", "S", "IRE"])]
+    df = df[df["train_type"].isin(["ICE", "IC", "RE", "RB", "IRE"])]
     
     return df
 
