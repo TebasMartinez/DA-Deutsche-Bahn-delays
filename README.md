@@ -36,6 +36,13 @@ python combinedata.py data/datalist.txt combineddata.csv
 ### Punctuality definition:
 - For this analysis, I've used the same definition of punctuality that the Deutsche Bahn considers in [their own reports](https://www.deutschebahn.com/de/konzern/konzernprofil/zahlen_fakten/puenktlichkeitswerte-6878476#). Trains are considered on time if they arrive less than 6 minutes late.
 
+### Train types included:
+- ICE: InterCityExpress
+- IC: InterCity
+- RE: Regional-Express
+- RB: Regionalbahn
+- IRE: Interregio-Express
+
 ### Process:
 - `functions.py`
   - clean(df) 
