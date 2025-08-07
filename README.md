@@ -1,5 +1,5 @@
 # Data Analysis - Deutsche Bahn delays
-DA-Deutsche-Bahn-delays
+
 ## Description
 Analyse Deutsche Bahn delays data for 1 year (July 2024 to July 2025) including Regional and Intercity trains ICE, IC, RE, RB, and IRE.
 
@@ -17,7 +17,7 @@ python clean_filter_group_data.py
 ````
 
 ## Questions / Hypothesis
-- Are Deustche Bahn trains late more than 33% of the times?
+- Are Deutsche Bahn trains late more than 33% of the times?
 - Is there a difference in train delays between stations in former West/East Germany?
 - Is any type of train (ICE, IC, RE, RB, or IRE) late more often than others?
 - Are trains late more often in a specific season?
@@ -54,7 +54,7 @@ python clean_filter_group_data.py
     - Drops columns that aren't needed for this analysis.
     - Resets index.
   - filter(df)
-    - Filters train types to include only "ICE", "IC", "RE", "RB", and "IRE", which operate only within Germany and are operated by Deustche Bahn.
+    - Filters train types to include only "ICE", "IC", "RE", "RB", and "IRE".
   - group_dates_seasons(df)
     - Creates new columns for "year", "month", "day", and "season", and assigns relevant values to each row.
   - group_puctuality(df)
