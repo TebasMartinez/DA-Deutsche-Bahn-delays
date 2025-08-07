@@ -17,7 +17,7 @@ python clean_filter_group_data.py
 ````
 
 ## Questions / Hypothesis
-- Are Deutsche Bahn trains late more than 33% of the times?
+- Are Deutsche Bahn trains late more than 33% of the time?
 - Is there a difference in train delays between stations in former West/East Germany?
 - Is any type of train (ICE, IC, RE, RB, or IRE) late more often than others?
 - Are trains late more often in a specific season?
@@ -39,7 +39,7 @@ python clean_filter_group_data.py
   - Presentation.
 
 ### Punctuality definition:
-- For this analysis, I've used the same definition of punctuality that the Deutsche Bahn considers in [their own reports](https://www.deutschebahn.com/de/konzern/konzernprofil/zahlen_fakten/puenktlichkeitswerte-6878476#). Trains are considered on time if they arrive less than 6 minutes late.
+- For this analysis, I've used the same definition of punctuality that the Deutsche Bahn considers as "operational punctuality" in [their own reports](https://www.deutschebahn.com/de/konzern/konzernprofil/zahlen_fakten/puenktlichkeitswerte-6878476#). Trains are considered on time if they arrive with a delay of less than 6 minutes.
 
 ### Train types included:
 - ICE: InterCityExpress
@@ -48,24 +48,36 @@ python clean_filter_group_data.py
 - RB: Regionalbahn
 - IRE: Interregio-Express
 
-### Process:
-- `functions.py`
-  - clean(df) 
-    - Drops columns that aren't needed for this analysis.
-    - Resets index.
-  - filter(df)
-    - Filters train types to include only "ICE", "IC", "RE", "RB", and "IRE".
-  - group_dates_seasons(df)
-    - Creates new columns for "year", "month", "day", and "season", and assigns relevant values to each row.
-  - group_puctuality(df)
-    - Creates new column "punctuality" and assigns relevant values to each row: "On time", "Late", "Early", "Canceled".
-  - separate_cat_num(df)
-    - Separates categorical and numerical variables, returning two different dataframes including only those variables.
-  - group_west_east(df)
-    - Adds a new column indicating if the station is within former West or East Germany. For the purposes of this analysis, all stations in Berlin have been labelled as East.
+### Grouping by former East/West Germany:
+For the purposes of this analysis, all stations in Berlin have been labelled as East.
+
+## Repository content
+- Data:
+  - `data` directory, including 13 .parquet files each containing data for one month, and a .txt file listing them.
+- Analysis:
+  - `Univariate EDA.ipynb` in Jupyter Notebook.
+  - `Bivariate EDA.ipynb` in Jupyter Notebook.
+- Python helper files:
+  - `functions.py` contains functions used throughout the analysis.
+  - `combinedata.py` combines the initial 13 .parquet files into a single .csv.
+  - `clean_filter_group_data.py` applies some of the functions in `functions.py` to the previously generated .csv, making it ready for Tableau.
 
 ## Conclusions
 
+- Are Deutsche Bahn trains late more than 33% of the time?
+  - No: 22,34% late rides.
+
+- Is there a difference in train delays between stations in former West/East Germany?
+  - Yes:
+    - Former East Germany: 15,31% late rides.
+    - Former West Germany: 24,60% late rides.
+
+- Is any type of train (ICE, IC, RE, RB, or IRE) late more often than others?
+  - Yes:
+    - Intercity trains have been late more often than regional trains.
+
+- Are trains late more often in a specific season?
+  - All seasons are within ±3 percentage points of the overall 22,34% late rides.
 
 
 ## Further questions
