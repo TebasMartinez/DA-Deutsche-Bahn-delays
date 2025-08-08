@@ -84,7 +84,7 @@ python clean_filter_group_data.py
 
 
 ## Further questions
-- Multivariate analysis: cross delays with station of departure and station of arrival. Are differences in delays by locations by location maintained when considering station of arrival too?
+- Multivariate analysis: cross delays with station of departure and station of arrival. Are differences in delays by locations maintained when considering station of arrival too?
 - Are there differences between Bundesländer?
 - How do these medium-long distance services compare to local services such as S-Bahn?
 
