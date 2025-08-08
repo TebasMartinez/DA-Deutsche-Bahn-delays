@@ -65,19 +65,19 @@ For the purposes of this analysis, all stations in Berlin have been labelled as 
 ## Conclusions
 
 - Are Deutsche Bahn trains late more than 33% of the time?
-  - No: 22,34% late rides.
+  - No: 22,34% late trips.
 
 - Is there a difference in train delays between stations in former West/East Germany?
   - Yes:
-    - Former East Germany: 15,31% late rides.
-    - Former West Germany: 24,60% late rides.
+    - Former East Germany: 15,31% late trips.
+    - Former West Germany: 24,60% late trips.
 
 - Is any type of train (ICE, IC, RE, RB, or IRE) late more often than others?
   - Yes:
     - Intercity trains have been late more often than regional trains.
 
 - Are trains late more often in a specific season?
-  - All seasons are within ±3 percentage points of the overall 22,34% late rides.
+  - All seasons are within ±3 percentage points of the overall 22,34% late trips.
 
 
 ## Further questions
