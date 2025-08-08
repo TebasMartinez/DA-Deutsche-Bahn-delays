@@ -48,8 +48,11 @@ python clean_filter_group_data.py
 - RB: Regionalbahn
 - IRE: Interregio-Express
 
+### Locations:
+- The analysis only considers station of departure.
+
 ### Grouping by former East/West Germany:
-For the purposes of this analysis, all stations in Berlin have been labelled as East.
+- For the purposes of this analysis, all stations in Berlin have been labelled as East.
 
 ## Repository content
 - Data:
@@ -65,7 +68,7 @@ For the purposes of this analysis, all stations in Berlin have been labelled as 
 ## Conclusions
 
 - Are Deutsche Bahn trains late more than 33% of the time?
-  - No: 22,34% late trips.
+  - No: 22,34% of the analysed trips were late.
 
 - Is there a difference in train delays between stations in former West/East Germany?
   - Yes:
@@ -77,10 +80,13 @@ For the purposes of this analysis, all stations in Berlin have been labelled as 
     - Intercity trains have been late more often than regional trains.
 
 - Are trains late more often in a specific season?
-  - All seasons are within ±3 percentage points of the overall 22,34% late trips.
+  - All seasons are within ±3 percentage points of the overall 22,34% of late trips.
 
 
 ## Further questions
+- Multivariate analysis: cross delays with station of departure and station of arrival. Are differences in delays by locations by location maintained when considering station of arrival too?
+- Are there differences between Bundesländer?
+- How do these medium-long distance services compare to local services such as S-Bahn?
 
 ## Resources
 - [Presentation](https://docs.google.com/presentation/d/1KAW7xkThyYQWdZLAZBlmom_rsz0XtU7AArOaDFuBh64/edit?usp=sharing)
