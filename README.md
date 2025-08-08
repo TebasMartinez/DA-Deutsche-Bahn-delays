@@ -89,7 +89,8 @@ python clean_filter_group_data.py
 - How do these medium-long distance services compare to local services such as S-Bahn?
 
 ## Resources
-- [Presentation](https://docs.google.com/presentation/d/1KAW7xkThyYQWdZLAZBlmom_rsz0XtU7AArOaDFuBh64/edit?usp=sharing)
-  
 - [Tableau dashboard](https://public.tableau.com/views/DA-Deutsche-Bahn-delays/DA-DeutscheBahndelays)
 [![Tableau Dashboard Preview](https://public.tableau.com/static/images/DA/DA-Deutsche-Bahn-delays/DA-DeutscheBahndelays/1.png)](https://public.tableau.com/views/DA-Deutsche-Bahn-delays/DA-DeutscheBahndelays)
+
+- [Presentation](https://docs.google.com/presentation/d/1KAW7xkThyYQWdZLAZBlmom_rsz0XtU7AArOaDFuBh64/edit?usp=sharing)
+[![Presentation's front page](images/presentation.svg)](https://docs.google.com/presentation/d/1KAW7xkThyYQWdZLAZBlmom_rsz0XtU7AArOaDFuBh64/edit?usp=sharing)
